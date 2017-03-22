@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'http://www.actoresenescena.net';
-$db['default']['username'] = 'actorese';
-$db['default']['password'] = 'AmkqCpXZ23Ah8KvA8V';
-$db['default']['database'] = 'actorese_actoresenescena_db';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+$db['default']['database'] = 'actoresenescena_db';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
