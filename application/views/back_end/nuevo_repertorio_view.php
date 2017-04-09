@@ -19,6 +19,10 @@
                                     <label>Nombre de la obra</label>
                                     <input type="text" class="form-control" id="obra" name="obra" placeholder="Obra">
                                 </div>
+                            <div class="form-group">
+                                <label>Autor</label>
+                                <input type="text" class="form-control" id="autor" name="autor" placeholder="Autor">
+                            </div>
                                 <div class="form-group">
                                     <label>Director</label>
                                     <input type="text" class="form-control" id="director" name="director" placeholder="Director">

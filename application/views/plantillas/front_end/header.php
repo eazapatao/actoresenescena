@@ -1,16 +1,53 @@
 <body>
 <!--start-home-->
 <div class="banner w3l" id="home">
+
     <div class="header-bottom">
+
+        <?php foreach ($banner as $key) { ?>
+<style>
+            .banner {
+             background: url(<?php echo base_url().'uploads/' . $key['ban_fotografia'] ?>);
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            min-height: 800px;
+            position: relative;
+            }
+
+            .test-left-img {
+                background: url(<?php echo base_url().'uploads/' . $key['ban_fotografia'] ?>);
+                /*--background: url(../images/banner.jpg) no-repeat 0px 0px;--*/
+
+
+
+                background-size: cover;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                -ms-background-size: cover;
+                min-height: 700px;
+            }
+
+</style>
+        <?php } ?>
+
         <div class="container">
+
             <div class="fixed-header">
-                <!--logo-->
+
+            <!--logo-->
                 <div class="logo wow fadeInLeft animated animated" data-wow-delay=".5s"
                      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
 
-                    <a href="<?= base_url()?>index.php/login"><img
-                            src="<?php echo base_url() ?>asset/front_end/images/logo.png""></a>
+                    <a href="<?= base_url()?>index.php/login">
+
+                    </a>
                 </div>
+
+
                 <!--//logo-->
                 <div class="top-menu wow fadeInRight animated animated" data-wow-delay=".5s"
                      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
@@ -88,3 +125,4 @@
     <!--banner Slider starts Here-->
 
 </div>
+</body>

@@ -23,6 +23,11 @@
                                        value="<?= $key['rep_obra'] ?>">
                             </div>
                             <div class="form-group">
+                                <label>Autor</label>
+                                <input type="text" class="form-control" id="autor" name="autor"
+                                       placeholder="Autor" value="<?= $key['rep_autor'] ?>">
+                            </div>
+                            <div class="form-group">
                                 <label>Director</label>
                                 <input type="text" class="form-control" id="director" name="director"
                                        placeholder="Director" value="<?= $key['rep_director'] ?>">

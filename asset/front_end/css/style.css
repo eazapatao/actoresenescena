@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
 body a {
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -51,7 +52,11 @@ label {
 
 /*-- header --*/
 .banner {
-    background: url(../images/banner.jpg) no-repeat 0px 0px;
+   /*-- background: url(../images/banner.jpg) no-repeat 0px 0px; --*/
+ /*--   background: url(../images/banner.jpg) no-repeat 0px 0px; --*/
+
+
+
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1239,7 +1244,11 @@ h4.tittle {
 }
 
 .test-left-img {
-    background: url(../images/banner.jpg) no-repeat 0px 0px;
+   /*-- background: url(../images/banner.jpg) no-repeat 0px 0px; --*/
+    /*--background: url(../images/banner.jpg) no-repeat 0px 0px;--*/
+
+
+
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;

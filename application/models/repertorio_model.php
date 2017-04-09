@@ -46,6 +46,7 @@ class repertorio_model extends CI_Model{
 
         $data = array(
             "rep_obra" => $this->input->post("obra"),
+            "rep_autor" => $this->input->post("autor"),
             "rep_director" => $this->input->post("director"),
             "rep_genero" => $this->input->post("genero"),
             "rep_duracion" => $this->input->post("duracion"),

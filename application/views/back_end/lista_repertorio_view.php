@@ -27,6 +27,7 @@
                                 <thead>
                                 <tr>
                                     <th>Obra</th>
+                                    <th>Autor</th>
                                     <th>Director</th>
                                     <th>Género</th>
                                     <th>Duración</th>
@@ -41,6 +42,7 @@
                                 <tfoot>
                                 <tr>
                                     <th>Obra</th>
+                                    <th>Autor</th>
                                     <th>Director</th>
                                     <th>Género</th>
                                     <th>Duración</th>
@@ -56,6 +58,7 @@
                                 <?php foreach ($repertorios as $key) { ?>
                                     <tr>
                                         <td><?= $key['rep_obra'] ?></td>
+                                        <td><?= $key['rep_autor'] ?></td>
                                         <td><?= $key['rep_director'] ?></td>
                                         <td><?= $key['rep_genero'] ?></td>
                                         <td><?= $key['rep_duracion'] ?></td>

@@ -136,8 +136,8 @@ class reserva_model extends CI_Model
                 'protocol' => 'smtp',
                 'smtp_host' => 'ssl://smtp.gmail.com',
                 'smtp_port' => 465,
-                'smtp_user' => 'andres.asi25@gmail.com',
-                'smtp_pass' => '@ndres..1053%',
+                'smtp_user' => 'actoresenescena.teatro@gmail.com',
+                'smtp_pass' => 'saladeteatro',
                 'mailtype' => 'html',
                 'charset' => 'utf-8',
                 'newline' => "\r\n"
