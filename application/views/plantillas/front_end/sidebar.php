@@ -229,7 +229,7 @@
                                  style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
                                 <img data-toggle="modal"
                                      data-target="#myModal" href="#reservar"
-                                     src="<?php echo base_url() . 'uploads/' . $key['fxr_foto'] ?>"/>
+                                     src="<?php echo base_url() . 'uploads/' . $key['fxr_foto3'] ?>"/>
 
                             </div>
                         </figure>
@@ -241,7 +241,7 @@
                                  style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
                                 <img data-toggle="modal"
                                      data-target="#myModal" href="#reservar"
-                                     src="<?php echo base_url() . 'uploads/' . $key['fxr_foto2'] ?>"/>
+                                     src="<?php echo base_url() . 'uploads/' . $key['fxr_foto4'] ?>"/>
                             </div>
                         </figure>
                     </div>

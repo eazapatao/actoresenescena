@@ -27,6 +27,14 @@
                         <?php echo form_label('Archivo 2', 'userfile1') ?>
                         <?php echo form_upload('userfile1') ?>
                     </p>
+                    <p>
+                        <?php echo form_label('Archivo 3', 'userfile2') ?>
+                        <?php echo form_upload('userfile2') ?>
+                    </p>
+                    <p>
+                        <?php echo form_label('Archivo 4', 'userfile3') ?>
+                        <?php echo form_upload('userfile3') ?>
+                    </p>
                     <p><?php echo form_submit('submit', 'Subir Archivos!') ?></p>
                     <?php form_close() ?>
                 </div>

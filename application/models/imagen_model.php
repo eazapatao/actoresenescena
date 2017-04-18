@@ -16,12 +16,14 @@ class imagen_model extends CI_Model{
     }
 
 
-    function guardar_repertorio_foto($foto1,$foto2){
+    function guardar_repertorio_foto($foto1,$foto2,$foto3,$foto4){
 
         $data = array(
             "rep_codigo" => $this->input->post("obra"),
             "fxr_foto" => $foto1,
-            "fxr_foto2" => $foto2
+            "fxr_foto2" => $foto2,
+            "fxr_foto3" => $foto3,
+            "fxr_foto4" => $foto4
         );
 
         $this->db->insert("t_fotoxrepertorio", $data);

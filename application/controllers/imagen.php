@@ -74,10 +74,50 @@ class imagen extends CI_Controller
                     echo $this->upload->display_errors();
                 }
             }
+            // Revisamos si existe un tercer archivo
+            if (!empty($_FILES['userfile2']['name'])) {
+                // La configuración del Archivo 2, debe ser diferente del archivo 1
+                // si configuras como el Archivo 1 no hará nada
+                $config['upload_path'] = 'uploads/';
+                $config['allowed_types'] = 'gif|jpg|png';
+                $config['max_size'] = '99999';
+                $config['max_width'] = '10000';
+                $config['max_height'] = '10000';
+                // Cargamos la nueva configuración
+                $this->upload->initialize($config);
+                // Subimos el segundo Archivo
+                if ($this->upload->do_upload('userfile2')) {
+
+                    $data = $this->upload->data();
+                    $imagen3 = $data['file_name'];
+                } else {
+                    echo $this->upload->display_errors();
+                }
+            }
+            // Revisamos si existe un tercer archivo
+            if (!empty($_FILES['userfile3']['name'])) {
+                // La configuración del Archivo 2, debe ser diferente del archivo 1
+                // si configuras como el Archivo 1 no hará nada
+                $config['upload_path'] = 'uploads/';
+                $config['allowed_types'] = 'gif|jpg|png';
+                $config['max_size'] = '99999';
+                $config['max_width'] = '10000';
+                $config['max_height'] = '10000';
+                // Cargamos la nueva configuración
+                $this->upload->initialize($config);
+                // Subimos el segundo Archivo
+                if ($this->upload->do_upload('userfile3')) {
+
+                    $data = $this->upload->data();
+                    $imagen4 = $data['file_name'];
+                } else {
+                    echo $this->upload->display_errors();
+                }
+            }
         } else {
             redirect('imagen', 'refresh');
         }
-        $this->guardar_repertorio_foto($imagen1,$imagen2);
+        $this->guardar_repertorio_foto($imagen1,$imagen2,$imagen3,$imagen4);
         redirect('imagen', 'refresh');
     }
 
@@ -99,12 +139,12 @@ class imagen extends CI_Controller
 
     }
 
-    function guardar_repertorio_foto($foto1,$foto2)
+    function guardar_repertorio_foto($foto1,$foto2,$foto3,$foto4)
     {
 
         if ($this->session->userdata('logged_in')) {
 
-            $this->imagen_model->guardar_repertorio_foto($foto1,$foto2);
+            $this->imagen_model->guardar_repertorio_foto($foto1,$foto2,$foto3,$foto4);
             redirect('imagen', 'refresh');
         } else {
             //If no session, redirect to login page

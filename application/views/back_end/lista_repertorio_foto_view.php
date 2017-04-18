@@ -23,6 +23,8 @@
                                     <th>Obra</th>
                                     <th>Imagen 1</th>
                                     <th>Imagen 2</th>
+                                    <th>Imagen 3</th>
+                                    <th>Imagen 4</th>
                                     <th>Opciones</th>
 
                                 </tr>
@@ -33,6 +35,8 @@
                                     <th>Obra</th>
                                     <th>Imagen 1</th>
                                     <th>Imagen 2</th>
+                                    <th>Imagen 3</th>
+                                    <th>Imagen 4</th>
                                     <th>Opciones</th>
 
                                 </tr>
@@ -44,11 +48,19 @@
                                         <td><?= $key['rep_obra'] ?></td>
                                         <td>
                                             <center><img src="<?php echo base_url() . 'uploads/' . $key['fxr_foto'] ?>"
-                                                         with=178 height=180></center>
+                                                         with=158 height=160></center>
                                         </td>
                                         <td>
                                             <center><img src="<?php echo base_url() . 'uploads/' . $key['fxr_foto2'] ?>"
-                                                         with=178 height=180></center>
+                                                         with=158 height=160></center>
+                                        </td>
+                                        <td>
+                                            <center><img src="<?php echo base_url() . 'uploads/' . $key['fxr_foto3'] ?>"
+                                                         with=158 height=160></center>
+                                        </td>
+                                        <td>
+                                            <center><img src="<?php echo base_url() . 'uploads/' . $key['fxr_foto4'] ?>"
+                                                         with=158 height=160></center>
                                         </td>
                                         <td>
 
