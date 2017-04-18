@@ -161,7 +161,8 @@ class reserva_model extends CI_Model
                     1) El precio de reservación para suscriptores de la patria es de una (1) boleta por suscriptor<br>
                     2) Estudiantes con carnet deberán presentar su carnet activo para ingresar a la función<br>
                     3) La reserva se respetará hasta 10 minutos antes de la hora de la función.<br>
-                    4) Si existen cambios en su reserva por favor informarlo</p>
+                    4) Si existen cambios en su reserva por favor informarlo</p><br><br>
+                    Este correo es informativo, favor no responder a esta dirección de correo<br><br>
         <br>¡Actores en escena 23 años de puro teatro! </p>');
 
             $this->email->send();
@@ -175,8 +176,8 @@ class reserva_model extends CI_Model
                 'protocol' => 'smtp',
                 'smtp_host' => 'ssl://smtp.gmail.com',
                 'smtp_port' => 465,
-                'smtp_user' => 'andres.asi25@gmail.com',
-                'smtp_pass' => '@ndres..1053%',
+                'smtp_user' => 'actoresenescena.teatro@gmail.com',
+                'smtp_pass' => 'saladeteatro',
                 'mailtype' => 'html',
                 'charset' => 'utf-8',
                 'newline' => "\r\n"
@@ -197,7 +198,8 @@ class reserva_model extends CI_Model
                     1) El precio de reservación para suscriptores de la patria es de una (1) boleta por suscriptor<br>
                     2) Estudiantes con carnet deberán presentar su carnet activo para ingresar a la función<br>
                     3) La reserva se respetará hasta 10 minutos antes de la hora de la función.<br>
-                    4) Si existen cambios en su reserva por favor informarlo</p>
+                    4) Si existen cambios en su reserva por favor informarlo</p><br>
+                    Este correo es informativo, favor no responder a esta dirección de correo<br>
         <br>¡Actores en escena 23 años de puro teatro! </p> ');
 
             $this->email->send();

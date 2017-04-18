@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="146c4fcb-4213-4616-a98a-8b1155f62aae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/imagen.php" afterPath="$PROJECT_DIR$/application/controllers/imagen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/imagen_model.php" afterPath="$PROJECT_DIR$/application/models/imagen_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/back_end/lista_repertorio_foto_view.php" afterPath="$PROJECT_DIR$/application/views/back_end/lista_repertorio_foto_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/back_end/nuevo_repertorio_foto_view.php" afterPath="$PROJECT_DIR$/application/views/back_end/nuevo_repertorio_foto_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/plantillas/front_end/sidebar.php" afterPath="$PROJECT_DIR$/application/views/plantillas/front_end/sidebar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/reserva_model.php" afterPath="$PROJECT_DIR$/application/models/reserva_model.php" />
     </list>
     <ignored path="motoros.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,68 +23,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/plantillas/front_end/sidebar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="243" column="94" selection-start-line="243" selection-start-column="94" selection-end-line="243" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="imagen_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/imagen_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nuevo_repertorio_foto_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/back_end/nuevo_repertorio_foto_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="imagen.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/imagen.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="146" column="84" selection-start-line="146" selection-start-column="84" selection-end-line="146" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lista_repertorio_foto_view.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/back_end/lista_repertorio_foto_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reserva_model.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reserva_model.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/reserva_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1060">
-              <caret line="133" column="38" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
+            <state relative-caret-position="612">
+              <caret line="201" column="97" selection-start-line="201" selection-start-column="97" selection-end-line="201" selection-end-column="97" />
               <folding>
-                <marker date="1491707084800" expanded="true" signature="246:319" ph="SELECT (*) a... t_reserva" />
-                <marker date="1491707084800" expanded="true" signature="630:731" ph="SELECT sum(r... t_reserva" />
-                <marker date="1491707084800" expanded="true" signature="1050:1133" ph="SELECT rep_c... t_repertorio" />
-                <marker date="1491707084800" expanded="true" signature="4979:5651" ph="..." />
-                <marker date="1491707084800" expanded="true" signature="6650:7297" ph="..." />
-                <marker date="1491707084800" expanded="true" signature="7476:7558" ph="SELECT rep_o... t_repertorio" />
+                <marker date="1492548869576" expanded="true" signature="246:319" ph="SELECT (*) a... t_reserva" />
+                <marker date="1492548869576" expanded="true" signature="630:731" ph="SELECT sum(r... t_reserva" />
+                <marker date="1492548869576" expanded="true" signature="1050:1133" ph="SELECT rep_c... t_repertorio" />
+                <marker date="1492548869576" expanded="true" signature="4979:5651" ph="..." />
+                <marker date="1492548869576" expanded="true" signature="6769:7416" ph="..." />
+                <marker date="1492548869576" expanded="true" signature="7697:7779" ph="SELECT rep_o... t_repertorio" />
               </folding>
             </state>
           </provider>
@@ -155,12 +100,12 @@
         <option value="$PROJECT_DIR$/application/controllers/quienessomos.php" />
         <option value="$PROJECT_DIR$/application/models/quienessomos_model.php" />
         <option value="$PROJECT_DIR$/application/views/plantillas/front_end/footer.php" />
-        <option value="$PROJECT_DIR$/application/models/reserva_model.php" />
         <option value="$PROJECT_DIR$/application/views/plantillas/front_end/sidebar.php" />
         <option value="$PROJECT_DIR$/application/models/imagen_model.php" />
         <option value="$PROJECT_DIR$/application/views/back_end/nuevo_repertorio_foto_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/imagen.php" />
         <option value="$PROJECT_DIR$/application/views/back_end/lista_repertorio_foto_view.php" />
+        <option value="$PROJECT_DIR$/application/models/reserva_model.php" />
       </list>
     </option>
   </component>
@@ -445,15 +390,15 @@
       <workItem from="1491705928915" duration="831000" />
       <workItem from="1491706879807" duration="443000" />
       <workItem from="1492528335792" duration="1362000" />
-      <workItem from="1492545244932" duration="2262000" />
+      <workItem from="1492545244932" duration="3535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215450000" />
+    <option name="totallyTimeSpent" value="216723000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -777,14 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/reserva.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1836">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/teatroempresarial_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204">
@@ -819,25 +756,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/reserva_model.php">
+    <entry file="file://$PROJECT_DIR$/application/views/back_end/lista_repertorio_foto_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1060">
-          <caret line="133" column="38" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
-          <folding>
-            <marker date="1491707084800" expanded="true" signature="246:319" ph="SELECT (*) a... t_reserva" />
-            <marker date="1491707084800" expanded="true" signature="630:731" ph="SELECT sum(r... t_reserva" />
-            <marker date="1491707084800" expanded="true" signature="1050:1133" ph="SELECT rep_c... t_repertorio" />
-            <marker date="1491707084800" expanded="true" signature="4979:5651" ph="..." />
-            <marker date="1491707084800" expanded="true" signature="6650:7297" ph="..." />
-            <marker date="1491707084800" expanded="true" signature="7476:7558" ph="SELECT rep_o... t_repertorio" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/plantillas/front_end/sidebar.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/imagen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="243" column="94" selection-start-line="243" selection-start-column="94" selection-end-line="243" selection-end-column="94" />
+        <state relative-caret-position="359">
+          <caret line="146" column="84" selection-start-line="146" selection-start-column="84" selection-end-line="146" selection-end-column="84" />
           <folding />
         </state>
       </provider>
@@ -858,19 +788,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/imagen.php">
+    <entry file="file://$PROJECT_DIR$/application/views/plantillas/front_end/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="146" column="84" selection-start-line="146" selection-start-column="84" selection-end-line="146" selection-end-column="84" />
+        <state relative-caret-position="340">
+          <caret line="243" column="94" selection-start-line="243" selection-start-column="94" selection-end-line="243" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/back_end/lista_repertorio_foto_view.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/reserva.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+        <state relative-caret-position="-306">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/reserva_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="201" column="97" selection-start-line="201" selection-start-column="97" selection-end-line="201" selection-end-column="97" />
+          <folding>
+            <marker date="1492548869576" expanded="true" signature="246:319" ph="SELECT (*) a... t_reserva" />
+            <marker date="1492548869576" expanded="true" signature="630:731" ph="SELECT sum(r... t_reserva" />
+            <marker date="1492548869576" expanded="true" signature="1050:1133" ph="SELECT rep_c... t_repertorio" />
+            <marker date="1492548869576" expanded="true" signature="4979:5651" ph="..." />
+            <marker date="1492548869576" expanded="true" signature="6769:7416" ph="..." />
+            <marker date="1492548869576" expanded="true" signature="7697:7779" ph="SELECT rep_o... t_repertorio" />
+          </folding>
         </state>
       </provider>
     </entry>
