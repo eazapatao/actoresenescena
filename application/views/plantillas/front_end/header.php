@@ -5,44 +5,45 @@
     <div class="header-bottom">
 
         <?php foreach ($banner as $key) { ?>
-<style>
-            .banner {
-             background: url(<?php echo base_url().'uploads/' . $key['ban_fotografia'] ?>);
-            background-size: cover;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            -ms-background-size: cover;
-            min-height: 800px;
-            position: relative;
-            }
+            <style>
+                .banner {
+                    background: url(<?php echo base_url().'uploads/' . $key['ban_fotografia'] ?>);
+                    background-size: 100%;
+                    -webkit-background-size: 100%;
+                    -moz-background-size: 100%;
+                    -o-background-size: 100%;
+                    -ms-background-size: 100%;
+                    min-height: 800px;
+                    position: relative;
+                    background-repeat: no-repeat;
 
-            .test-left-img {
-                background: url(<?php echo base_url().'uploads/' . $key['ban_fotografia'] ?>);
-                /*--background: url(../images/banner.jpg) no-repeat 0px 0px;--*/
+                }
+
+                /*  .test-left-img {
+                      background: url();
+                    background-size: 100%;
+                    -webkit-background-size: 100%;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    -ms-background-size: cover;
+                    min-height: 700px;
 
 
+                } */
 
-                background-size: cover;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                -ms-background-size: cover;
-                min-height: 700px;
-            }
 
-</style>
+            </style>
         <?php } ?>
 
         <div class="container">
 
             <div class="fixed-header">
 
-            <!--logo-->
+                <!--logo-->
                 <div class="logo wow fadeInLeft animated animated" data-wow-delay=".5s"
                      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
 
-                    <a href="<?= base_url()?>index.php/login">
+                    <a href="<?= base_url() ?>index.php/login">
 
                     </a>
                 </div>
@@ -57,7 +58,8 @@
                             <li class="active"><a data-hover="Inicio" href="<?= base_url() ?>">Inicio</a></li>
                             <li><a data-hover="Formación" href="#services" class="scroll">Formación</a></li>
                             <li><a data-hover="Repertorio" href="#about" class="scroll">Repertorio</a></li>
-                            <li><a data-hover="Teatro_empresarial" href="#gallery" class="scroll">Teatro_empresarial</a></li>
+                            <li><a data-hover="Teatro_empresarial" href="#gallery" class="scroll">Teatro_empresarial</a>
+                            </li>
                             <li><a data-hover="Programación" href="#testimonials" class="scroll">Programación</a></li>
                             <li><a data-hover="Quienes_somos" href="#team" class="scroll">Quienes_somos</a></li>
                             <li><a data-hover="Contacto" href="#contact" class="scroll">Contacto</a></li>
@@ -95,9 +97,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 
     <!--banner Slider starts Here-->
