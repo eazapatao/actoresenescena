@@ -73,11 +73,7 @@
                             </div>
 
 
-                            <div class="form-group">
-                                <label>Cantidad de sillas disponibles</label>
-                                <input type="text" class="form-control" id="cantidad" name="cantidad"
-                                       placeholder="Cantidad de sillas disponibles" value="<?= $key['rep_cantidad'] ?>">
-                            </div>
+
 
 
 
