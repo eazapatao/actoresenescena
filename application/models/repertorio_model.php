@@ -1,12 +1,24 @@
 <?php
 
-class repertorio_model extends CI_Model{
+class repertorio_model extends CI_Model
+{
 
 
-    function get_lista_repertorio(){
+    function get_lista_repertorio()
+    {
         $this->db->select('*');
         $this->db->from('t_fotoxrepertorio');
         $this->db->join('t_repertorio', 't_repertorio.rep_codigo = t_fotoxrepertorio.rep_codigo');
+        $query = $this->db->get();
+        return $query->result_array();
+
+    }
+
+    function get_lista_fechaxrepertorio()
+    {
+        $this->db->select('*');
+        $this->db->from('t_fechaxrepertorio');
+        $this->db->join('t_repertorio', 't_repertorio.rep_codigo = t_fechaxrepertorio.rep_codigo');
         $query = $this->db->get();
         return $query->result_array();
 
@@ -20,29 +32,22 @@ class repertorio_model extends CI_Model{
 
     }
 
-    function get_lista_repertorio_activo(){
+    function get_lista_repertorio_activo()
+    {
 
         $this->db->select('*');
         $this->db->from('t_fotoxrepertorio');
         $this->db->join('t_repertorio', 't_repertorio.rep_codigo = t_fotoxrepertorio.rep_codigo');
-        $this->db->where('rep_estado',1);
+        $this->db->where('rep_estado', 1);
         $query = $this->db->get();
         return $query->result_array();
 
 
+    }
 
-    }
-    function get_count_sillas_disponibles()
+
+    function guardar_repertorio()
     {
-        $query = "SELECT req_obra,rep_cantidad as activas
-        FROM t_repertorio
-        WHERE res_activo = 1";
-        $result = $this->db->query($query);
-        $obra = $result->result_array();
-        $totalreservas = $obra[0]['activas'];
-        return $totalreservas;
-    }
-    function guardar_repertorio(){
 
         $data = array(
             "rep_obra" => $this->input->post("obra"),
@@ -59,12 +64,38 @@ class repertorio_model extends CI_Model{
         );
 
         $this->db->insert("t_repertorio", $data);
+
     }
 
-    function get_repertorio($id){
+    function guardar_fechaxrepertorio()
+    {
+
+        $data = array(
+            "rep_codigo" => $this->input->post("obra"),
+            "fxr_fecha" => $this->input->post("fecha"),
+            "fxr_sillas" => $this->input->post("sillas")
+        );
+
+        $this->db->insert("t_fechaxrepertorio", $data);
+    }
+
+    function get_repertorio($id)
+    {
         $query = $this->db->get_where('t_repertorio', array('rep_codigo' => $id));
 
         return $query->result_array();
+
+    }
+   function get_fechaxrepertorio($id)
+    {
+
+        $this->db->select('*');
+        $this->db->from('t_fechaxrepertorio');
+        $this->db->join('t_repertorio', 't_repertorio.rep_codigo = t_fechaxrepertorio.rep_codigo');
+        $this->db->where('fxr_codigo', $id);
+        $query = $this->db->get();
+        return $query->result_array();
+
 
     }
 
@@ -87,6 +118,18 @@ class repertorio_model extends CI_Model{
         $this->db->where("rep_codigo", $this->input->post("rep_codigo"));
         $this->db->update('t_repertorio', $data);
 
+    }  function upd_fechaxrepertorio()
+    {
+        $data = array(
+            "rep_codigo" => $this->input->post("obra"),
+            "fxr_fecha" => $this->input->post("fecha"),
+            "fxr_sillas" => $this->input->post("sillas")
+
+        );
+
+        $this->db->where("fxr_codigo", $this->input->post("fxr_codigo"));
+        $this->db->update('t_fechaxrepertorio', $data);
+
     }
 
     function del_repertorio($id)
@@ -94,6 +137,12 @@ class repertorio_model extends CI_Model{
 
         $this->db->where("rep_codigo", $id);
         $this->db->delete('t_repertorio');
+
+    }  function del_fechaxrepertorio($id)
+    {
+
+        $this->db->where("fxr_codigo", $id);
+        $this->db->delete('t_fechaxrepertorio');
 
     }
 

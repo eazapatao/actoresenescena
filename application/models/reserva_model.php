@@ -25,25 +25,31 @@ class reserva_model extends CI_Model
     }
 
 //Cantidad de reservas realizadas para la obra seleccionada
-    function get_count_reserva_activa_reserva($obra)
+    function get_count_reserva_activa_reserva($obra,$fecha)
     {
 
         $query = "SELECT sum(res_sillas) as activas
-        FROM t_reserva
-        WHERE res_activo = 1 and rep_codigo=$obra";
+        FROM t_reserva,t_fechaxrepertorio
+        WHERE t_reserva.rep_codigo=t_fechaxrepertorio.rep_codigo and 
+        res_activo = 1 and t_reserva.rep_codigo=$obra and 
+        t_fechaxrepertorio.fxr_fecha=t_reserva.res_fecha 
+		and t_fechaxrepertorio.fxr_fecha='$fecha'";
         $result = $this->db->query($query);
         $obra = $result->result_array();
         $totalreservas = $obra[0]['activas'];
-        return $totalreservas;
+
+            return $totalreservas;
+
     }
 
 //Cantidad de máxima de reservaciones permitidas por el administrador
-    function get_count_cantidad_reserva($obra)
+// esta ok
+    function get_count_cantidad_reserva($obra,$fecha)
     {
 
-        $query = "SELECT rep_cantidad as cantidad
-        FROM t_repertorio
-        WHERE rep_codigo=$obra";
+        $query = "SELECT fxr_sillas as cantidad
+        FROM t_fechaxrepertorio
+        WHERE rep_codigo=$obra and fxr_fecha='$fecha'";
         $result = $this->db->query($query);
         $obra = $result->result_array();
         $totalreservas = $obra[0]['cantidad'];
@@ -59,6 +65,7 @@ class reserva_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+
     function get_lista_reserva_repertorio_editar($id)
     {
         $this->db->select('*');
@@ -88,8 +95,9 @@ class reserva_model extends CI_Model
     function guardar_reservapublico()
     {
         $obra = $this->input->post("obra");
-        $totalreservacionesactivas = $this->get_count_reserva_activa_reserva($obra);
-        $totalreservaspermitidas = $this->get_count_cantidad_reserva($obra);
+        $fecha = $this->input->post("fecha");
+        $totalreservacionesactivas = $this->get_count_reserva_activa_reserva($obra,$fecha);
+        $totalreservaspermitidas = $this->get_count_cantidad_reserva($obra,$fecha);
         $reservasdisponibles = $totalreservaspermitidas - $totalreservacionesactivas;
         if ($reservasdisponibles >= 1) {
             $nombreobra = $this->get_nombreobra($this->input->post("obra"));
@@ -97,20 +105,14 @@ class reserva_model extends CI_Model
             $fecha = $this->input->post("fecha");
             $nombre = $this->input->post("nombre");
 
-            if($this->input->post("tipoboleta")==12000)
-            {
-                if($this->input->post("sillas")>1)
-                {
-                    $valorapagar = (($this->input->post("sillas")-1)*15000)+12000;
-                }
-                else
-                {
-                    $valorapagar=12000;
+            if ($this->input->post("tipoboleta") == 12000) {
+                if ($this->input->post("sillas") > 1) {
+                    $valorapagar = (($this->input->post("sillas") - 1) * 15000) + 12000;
+                } else {
+                    $valorapagar = 12000;
                 }
 
-            }
-            else
-            {
+            } else {
                 $valorapagar = ($this->input->post("tipoboleta")) * ($this->input->post("sillas"));
             }
 
@@ -138,6 +140,8 @@ class reserva_model extends CI_Model
                 'smtp_port' => 465,
                 'smtp_user' => 'actoresenescena.teatro@gmail.com',
                 'smtp_pass' => 'saladeteatro',
+                //'smtp_user' => 'actoresenescena.teatro@gmail.com',
+                //'smtp_pass' => 'saladeteatro',
                 'mailtype' => 'html',
                 'charset' => 'utf-8',
                 'newline' => "\r\n"
@@ -178,6 +182,8 @@ class reserva_model extends CI_Model
                 'smtp_port' => 465,
                 'smtp_user' => 'actoresenescena.teatro@gmail.com',
                 'smtp_pass' => 'saladeteatro',
+                //'smtp_user' => 'actoresenescena.teatro@gmail.com',
+                //'smtp_pass' => 'saladeteatro',
                 'mailtype' => 'html',
                 'charset' => 'utf-8',
                 'newline' => "\r\n"

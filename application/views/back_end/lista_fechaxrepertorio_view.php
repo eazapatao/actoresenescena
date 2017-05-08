@@ -1,23 +1,14 @@
 <aside class="right-side">
     <!-- Content Header (Page header) -->
-
-
     <!-- Main content -->
     <section class="content">
-
         <div class="row">
-
             <div class="col-lg-12">
-
                 <div class="box box-primary">
-
                     <div class="box-header">
                         <br>
-                        <a class="btn btn-app" href="<?= base_url() ?>index.php/repertorio/nuevo_repertorio">
-                            <i class="fa fa-edit"></i> Nuevo repertorio
-                        </a>
-                        <a class="btn btn-app" href="<?= base_url() ?>index.php/repertorio/listafechaxrepertorio">
-                            <i class="fa fa-edit"></i> Agregar fechas de funciones
+                        <a class="btn btn-app" href="<?= base_url() ?>index.php/repertorio/nuevo_fechaxrepertorio">
+                            <i class="fa fa-edit">Agregar fechas de funciones</i>
                         </a>
                     </div><!-- /.box-header -->
                     <!-- form start -->
@@ -30,12 +21,8 @@
                                 <thead>
                                 <tr>
                                     <th>Obra</th>
-                                    <th>Autor</th>
-                                    <th>Director</th>
-                                    <th>Género</th>
-                                    <th>Duración</th>
-                                    <th>Estado</th>
-                                    <th>Temporada</th>
+                                    <th>Fecha</th>
+                                    <th>Sillas disponibles</th>
                                     <th>Opciones</th>
 
                                 </tr>
@@ -44,14 +31,9 @@
                                 <tfoot>
                                 <tr>
                                     <th>Obra</th>
-                                    <th>Autor</th>
-                                    <th>Director</th>
-                                    <th>Género</th>
-                                    <th>Duración</th>
-                                    <th>Estado</th>
-                                    <th>Temporada</th>
+                                    <th>Fecha</th>
+                                    <th>Sillas disponibles</th>
                                     <th>Opciones</th>
-
                                 </tr>
                                 </tfoot>
 
@@ -59,21 +41,19 @@
                                 <?php foreach ($repertorios as $key) { ?>
                                     <tr>
                                         <td><?= $key['rep_obra'] ?></td>
-                                        <td><?= $key['rep_autor'] ?></td>
-                                        <td><?= $key['rep_director'] ?></td>
-                                        <td><?= $key['rep_genero'] ?></td>
-                                        <td><?= $key['rep_duracion'] ?></td>
-                                        <td><?= $key['rep_estado'] ?></td>
-                                        <td><?= $key['rep_temporada'] ?></td>
+                                        <td><?= $key['fxr_fecha'] ?></td>
+                                        <td><?= $key['fxr_sillas'] ?></td>
+
                                         <td>
-                                            <a href="<?php echo base_url() ?>index.php/repertorio/editar/<?php echo $key['rep_codigo'] ?>"
+
+                                            <a href="<?php echo base_url() ?>index.php/repertorio/editarfechaxrepertorio/<?php echo $key['fxr_codigo'] ?>"
                                                type="button" class="btn btn-xs btn-warning">
                                                 <i class="glyphicon glyphicon-edit"></i>
                                             </a>
-                                            <a href="<?php echo base_url() ?>index.php/repertorio/del/<?php echo $key['rep_codigo'] ?>"
+
+                                            <a href="<?php echo base_url() ?>index.php/repertorio/delfechaxrepertorio/<?php echo $key['fxr_codigo'] ?>"
                                                type="button" class="btn btn-xs btn-danger delete"
-                                               data-toggle="confirmation"
-                                               data-placement="left">
+                                               data-toggle="confirmation" data-placement="left">
                                                 <i class="glyphicon glyphicon-trash"></i>
                                             </a>
                                         </td>

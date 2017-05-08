@@ -106,7 +106,7 @@
                             <div class="h-f">
                                 <figure class="effect-jazz">
                                     <img data-toggle="modal"
-                                         data-target="#myModal" href="#reservar"
+                                         data-target="" href="#reservar"
                                          src="<?php echo base_url() . 'uploads/' . $key['fxr_foto'] ?>"/>
 
                                     <figcaption>
@@ -119,7 +119,7 @@
                             <div class="h-f">
                                 <figure class="effect-jazz">
                                     <img data-toggle="modal"
-                                         data-target="#myModal" href="#reservar"
+                                         data-target="" href="#reservar"
                                          src="<?php echo base_url() . 'uploads/' . $key['fxr_foto2'] ?>"/>
 
                                     <figcaption>
